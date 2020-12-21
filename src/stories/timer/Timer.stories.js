@@ -1,5 +1,4 @@
 import Timer from "@/components/timer";
-import "./style.css";
 
 export default {
   title: "Components/Timer",

@@ -25,6 +25,8 @@
     "@storybook/vue": "^6.1.11",
     "babel-loader": "^8.2.2",
     "prettier": "1.19.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12"
   },
