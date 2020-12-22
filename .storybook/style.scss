@@ -1,38 +1,39 @@
-button {
-  cursor: pointer;
-  padding: 0 24px;
-  line-height: 36px;
-  color: #fff;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  background-color: #409eff;
-  &[disabled] {
-    cursor: not-allowed;
-    background-color: #a0cfff;
-  }
-}
-
-.loading {
-  display: inline-block;
-  &::after {
-    $size: 20px;
-    content: " ";
-    display: block;
-    width: $size;
-    height: $size;
-    margin: 8px;
-    border-radius: 50%;
-    border: 3px solid;
-    border-color: #409eff transparent #409eff transparent;
-    animation: loading 1.2s linear infinite;
-  }
-  @keyframes loading {
-    0% {
-      transform: rotate(0deg);
+.story {
+  &-button {
+    cursor: pointer;
+    padding: 0 24px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #409eff;
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: #a0cfff;
     }
-    100% {
-      transform: rotate(360deg);
+  }
+  &-loading {
+    display: inline-block;
+    &::after {
+      $size: 20px;
+      content: " ";
+      display: block;
+      width: $size;
+      height: $size;
+      margin: 8px;
+      border-radius: 50%;
+      border: 3px solid;
+      border-color: #409eff transparent #409eff transparent;
+      animation: story-loading 1.2s linear infinite;
+    }
+    @keyframes story-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }

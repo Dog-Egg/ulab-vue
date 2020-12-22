@@ -29,6 +29,7 @@ export const Main = (args, { argTypes }) => {
     >
     <template slot-scope="{currentSeconds}">
       <button
+        class="story-button"
         :disabled="timerActive"
         @click="timerActive = true"
       >

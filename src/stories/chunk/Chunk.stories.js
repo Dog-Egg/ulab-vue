@@ -18,7 +18,7 @@ export const Main = () => {
         <Chunk @load="onLoad" :key="key">
           <div>黑夜给我黑色的眼睛，我却用它寻找bug。</div>
         </Chunk>
-        <button @click="key++" style="margin-top: 20px">重置</button>
+        <button class="story-button" @click="key++" style="margin-top: 20px">重置</button>
       </div>
     `,
     methods: {
@@ -73,7 +73,7 @@ export const Custom = () => {
       <div>
         <Chunk @load="onLoad">
           <template #loading>
-            <div class="loading"></div>Loading...
+            <div class="story-loading"></div>Loading...
           </template>
           <template #error>
             <div class="error">Fuck!</div>
