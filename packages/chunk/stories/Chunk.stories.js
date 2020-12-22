@@ -1,13 +1,13 @@
-import Chunk from "@/components/chunk";
+import UChunk from "../src";
 
 export default {
   title: "Components/Chunk",
-  component: Chunk
+  component: UChunk
 };
 
 export const Main = () => {
   return {
-    components: { Chunk },
+    components: { UChunk },
     data() {
       return {
         key: 0
@@ -15,9 +15,9 @@ export const Main = () => {
     },
     template: `
       <div>
-        <Chunk @load="onLoad" :key="key">
+        <u-chunk @load="onLoad" :key="key">
           <div>黑夜给我黑色的眼睛，我却用它寻找bug。</div>
-        </Chunk>
+        </u-chunk>
         <button class="story-button" @click="key++" style="margin-top: 20px">重置</button>
       </div>
     `,
@@ -33,8 +33,8 @@ export const Main = () => {
 
 export const Error = () => {
   return {
-    components: { Chunk },
-    template: `<Chunk @load="onLoad" />`,
+    components: { UChunk },
+    template: `<u-chunk @load="onLoad" />`,
     methods: {
       onLoad(cb) {
         setTimeout(() => {
@@ -47,13 +47,13 @@ export const Error = () => {
 
 export const Lazy = () => {
   return {
-    components: { Chunk },
+    components: { UChunk },
     template: `
       <div style="height: 200px; overflow: auto; text-align: center;">
         <div style="margin-bottom: 200px;">Scroll down</div>
-        <Chunk height="auto" @load="onLoad" lazy>
+        <u-chunk height="auto" @load="onLoad" lazy>
           <div>黑夜给我黑色的眼睛，我却用它寻找bug。</div>
-        </Chunk>
+        </u-chunk>
       </div>
     `,
     methods: {
@@ -68,17 +68,17 @@ export const Lazy = () => {
 
 export const Custom = () => {
   return {
-    components: { Chunk },
+    components: { UChunk },
     template: `
       <div>
-        <Chunk @load="onLoad">
+        <u-chunk @load="onLoad">
           <template #loading>
             <div class="story-loading"></div>Loading...
           </template>
           <template #error>
             <div class="error">Fuck!</div>
           </template>
-        </Chunk>
+        </u-chunk>
       </div>
     `,
     methods: {

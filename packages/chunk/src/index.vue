@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "Chunk",
+  name: "UChunk",
   props: {
     height: {
       type: String,

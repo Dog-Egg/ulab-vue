@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Timer",
+  name: "UTimer",
   props: {
     active: {
       type: Boolean,

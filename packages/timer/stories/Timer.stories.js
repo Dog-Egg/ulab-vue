@@ -1,13 +1,13 @@
-import Timer from "@/components/timer";
+import UTimer from "../src";
 
 export default {
   title: "Components/Timer",
-  component: Timer
+  component: UTimer
 };
 
 export const Main = (args, { argTypes }) => {
   return {
-    components: { Timer },
+    components: { UTimer },
     props: Object.keys(argTypes),
     data() {
       return {
@@ -23,7 +23,7 @@ export const Main = (args, { argTypes }) => {
       }
     },
     template: `
-    <Timer
+    <u-timer
       :seconds="seconds"
       :active.sync="timerActive"
     >
@@ -36,7 +36,7 @@ export const Main = (args, { argTypes }) => {
         {{ !timerActive ? "发送验证码" : currentSeconds + "秒后再试" }}
       </button>
     </template>
-    </Timer>
+    </u-timer>
   `
   };
 };
